@@ -66,6 +66,21 @@
     </tr>
   </table>
   <hr>
+  <h5>Display the snippet code</h5>
+  <blockquote>
+    Is there an easy way to take a string of html in JavaScript and strip out the html?
+  </blockquote>
+
+  <p><a href="https://stackoverflow.com/questions/822452/strip-html-from-text-javascript"> stack overflow Link</a></p>
+
+  <pre>
+    const originalString = `
+  <div> <p>Hey that's <span>somthing</span></p>
+  </div>`;
+  
+let strippedString = originalString.replace(/(<([^>]+)>)/gi, "");
+console.log(strippedString);
+    </pre>
 
 </body>
 </html>
